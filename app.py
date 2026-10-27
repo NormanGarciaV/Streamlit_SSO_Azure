@@ -25,11 +25,16 @@ if os.getenv("DEV_INSECURE_SSL") == "1":
 
 st.set_page_config(page_title="My Secure App")
 
-if not st.user.is_logged_in:
-    st.title("Please sign in")
-    if st.button("Sign in with Microsoft"):
-        st.login()
-    st.stop()  # nothing below runs for anonymous users
+col1 = st.columns(1)[0]
+with col1:
+    st.header("RecOps Requisition Extractor", text_alignment="center")
+    with st.container(border=True, horizontal=True):
+
+        if not st.user.is_logged_in:
+            st.subheader("Please sign in")
+            if st.button("Sign in with Microsoft", icon="", type="primary"):
+                st.login()
+            st.stop()  # nothing below runs for anonymous users
 
 # --- Everything below is only visible to authenticated users ---
 with st.sidebar:
