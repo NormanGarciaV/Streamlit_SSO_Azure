@@ -5,6 +5,7 @@ Configured the SSO with Azure AD.
 
 - Uses the streamlit[auth] python library in the requirements.txt file
 - Create a .streamlit/secrets.toml with the following information:
+
 `
 [auth]
 redirect_uri = "http://localhost:8501/oauth2callback"
