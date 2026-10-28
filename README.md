@@ -13,6 +13,8 @@ cookie_secret = "LONG STRING OF CHARS"
 client_id = "AZURE_APP_REGISTRATION_CLIENT_ID"
 client_secret = "AZURE_APP_REGISTRATION_SECRET_VALUE"
 server_metadata_url = "https://login.microsoftonline.com/<MY_TENANT_ID>/v2.0/.well-known/openid-configuration"
+client_kwargs = { verify = false }
+
 `
 
 - In the Azure Enterprise applications, find the EVRRecOps and, under **Manage**,  go to **Users and Groups** and add the authorized users to use the app.
